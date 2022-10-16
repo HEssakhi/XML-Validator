@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Connexion</title>
+    <link rel="shortcut icon" href="static/images/logo1.jpg" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="static/css/register_login.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    
+
+    <div class="container">
+         <div class="sous_container">
+             
+         </div>
+         <div class="company_name">
+             <span>DE Validateur</span>
+         </div>
+
+    </div>
+
+
+    <div class="hero">
+
+        <p>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+             {% for message in messages %}
+               
+             {% if message == '1'%} 
+                <script type="text/javascript">
+                   swal({
+                      title:"l'email existe déjà",
+                      text:"Vous avez cliqué sur le bouton!",
+                      icon:"error"
+                       });
+                </script>
+             {% elif message == '2' %}
+                <script type="text/javascript">
+                   swal({
+                     title:"enregistré avec succès",
+                     text:"Vous avez cliqué sur le bouton!",
+                     icon:"success"
+                         });
+                </script> 
+             {% else %} 
+                <script type="text/javascript">
+                   swal({
+                      title:"l'email ou mot de passe pas correcte",
+                      text:"Vous avez cliqué sur le bouton!",
+                      icon:"error"
+                     });
+                </script>
+               
+             {% endif %}
+              
+              {% endfor %}
+             {% endif %}
+            {% endwith %}
+           </p> 
+
+
+          
+        <div class="form_box">
+            <div class="button_box">
+                <div id="btn"></div>
+                <button type="button" id="login_titre" class="toggle_btn">Connexion</button>
+                <button type="button" id="register_titre" class="toggle_btn">Register</button>
+            </div>
+            <!--------formulaire_login-------->
+            <form action="/Register.html" method="Post" class="input_group" id="login">
+                <input type="email" class="input_field" name="email" id="login_email" placeholder="Email">
+                <span class="erreur_mail"></span>
+                 <input type="text" name="check" value="login" hidden>
+                <input type="password" id="login_password" name="pass" class="input_field log" placeholder="Mot de passe">
+                <span class="erreur_pass"></span>
+                <i class="material-icons visibility1">visibility_off</i>
+                <a href=""><span id="forgoten">Mot de passe oublié?</span></a>
+                <button type="submit" name="signin" class="submit_btn" id="connexion">Connexion</button>
+                <!-----check password-->
+                
+            </form>
+            
+            
+            <!------formulaire_register------->
+            <form action="/Register.html" method="Post" class="input_group" id="register">
+                <input type="text" name="nom" class="input_field" id="reg_nom" placeholder="Nom">
+                <span class="erreur_nom"></span>
+                <input type="text" name="prenom" id="prenom_reg"  class="input_field" placeholder="Prénom">
+                <span class="erreur_prenom"></span>
+                <input type="text" name="check" value="register" hidden>
+                <input type="email" id="email_reg" name="email" class="input_field" placeholder="Email">
+                <span class="erreur_mail_reg"></span>
+                <input type="password" id="password_reg" name="pass" class="input_field reg" placeholder="Mot de passe">
+                <span class="erreur_pass_reg"></span>
+                <i class="material-icons visibility">visibility_off</i>
+                <button type="submit" name="btn" class="submit_btn" id="creer">Créer</button>
+            </form>
+        </div>
+    </div>
+   
+
+
+    <script src="static/js/log_reg.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+</body>
+</html>

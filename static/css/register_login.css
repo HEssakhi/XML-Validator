@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container{
+    box-shadow: 5px 1px 2px 0px #3b3b3b44;
+    height: 10vh;
+    padding: 0px 0px 0px 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: left;
+}
+
+.company_name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.company_name span{
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    color: #000;
+    font-family: 'Noto Sans JP', sans-serif;
+    margin-bottom: 7px;
+}
+
+.sous_container{
+    display: table;
+    padding: 5px;
+}
+
+.sous_container a{
+    text-decoration: none;
+}
+
+.sous_container a img{
+    height: 50px;
+    width: 50px;
+    display: table-column;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.hero{
+    margin: auto;
+}
+
+.form_box{
+    width: 380px;
+    height: 500px;
+    position: relative;
+    margin: 4% auto;
+    background-color: #fff;
+    box-shadow: 1px 1px 1px 1px #61616144;
+    border-radius: 8px;
+    z-index: 1;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.button_box{
+    width: 220px;
+    height: 35px auto;
+    margin: 5% auto;
+    position: relative;
+    border:solid thin #ebedee;
+    border-radius: 30px;
+}
+
+.toggle_btn{
+    padding: 10px 20px;
+    cursor: pointer;
+    background: transparent;
+    border: 0px;
+    outline: none;
+    margin-left: 8px;
+    position: relative;
+    transition: 1s;
+}
+
+#login_titre{
+    color: #fff;
+}
+
+#login_titre.active{
+    color: #fff;
+}
+
+#login_titre.active2{
+    color: #000;
+}
+
+#register_titre{
+    padding: 10px 20px;
+}
+
+#register_titre.inactive{
+    color: #fff;
+}
+
+
+#btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to right, #00a8fa, #00a8fa);
+    border-radius: 30px;
+    transition: .5s
+}
+
+.input_group{
+    top: 120px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+
+.input_field{
+    width: 100%;
+    padding: 5px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+
+.submit_btn{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: 10px auto;
+    background: linear-gradient(to right, #00a8fa, #00a8fa);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+span{
+    color: #777;
+    font-size: 12px;
+}
+
+#login{
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+#login a{
+    text-decoration: none;
+    transition: border ease 1s;
+    border-bottom:solid thin #a5a6a7;
+    line-height: 12px;
+    width: max-content;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+#login a:hover{
+    border-bottom: 1px solid #000;
+}
+
+#login_password{
+    margin-top: 40px;
+}
+
+#connexion{
+    margin-top: 60px;
+    width: 50%;
+    color: #fff;
+}
+
+#register{
+    left: 450px;
+    top: 88px;
+}
+
+/***************radio button**************/
+.radio-box{
+    width: 99%;
+    height: 30px;
+    padding: 5px 0;
+	display: flex;
+    justify-content: center;
+    text-align: center;
+    border:solid thin #999;
+}
+.radio-box label input{
+	display: none;
+}
+.radio-box label {
+    width: 65%;
+	display: block;
+	cursor: pointer;
+	margin-left: 15px;
+    position: relative;
+}
+.radio-box label .circle{
+	height: 13px;
+	width: 13px;
+	border:2px solid #7f8c8d;
+	border-radius: 50%;
+	display: inline-block;
+	position: absolute;
+	left:25px;
+	top: 7px;
+	transition: border-color .5s ease;
+}
+.radio-box label .circle::before{
+	content: '';
+	height: 7px;
+	width: 7px;
+	background-color: #ede734;
+	position: absolute;
+	left:0;
+	top:0;
+	border-radius: 50%;
+	box-sizing: border-box;
+	margin-left:3.1px;
+	margin-top:3.3px;
+	transition: transform .5s ease;
+	transform: scale(0);
+}
+.radio-box label span{
+	font-size: 14px;
+	color: #7f8c8d;
+	display: inline-block;
+    transition:color .5s ease;
+    position: absolute;
+    left: 45px;
+    top:6.5px;
+}
+.radio-box label input:checked + .circle{
+	border-color:#ede734;
+}
+.radio-box label input:checked + .circle::before{
+	transform: scale(1);
+}
+.radio-box label input:checked + .circle + span{
+	color:#01031e;
+}
+
+#creer{
+    margin-top: 30px;
+    width: 50%;
+    color: #fff;
+}
+
+#prenom_reg,#radio_reg,#email_reg,#tel_reg,#password_reg{
+    margin-top: 15px;
+}
+
+/********************/
+
+.visibility{
+    position: absolute;
+    top: 71.5%;
+    left: 90%;
+}
+
+.visibility1{
+    position: absolute;
+    left: 90%;
+    top: 30%;
+}
+
+.material-icons{
+    font-size: 20px;
+    color: #999;
+    cursor: pointer;
+}
+
+/********gestion des erreurs***********/
+
+.erreur_mail,
+.erreur_pass,
+.erreur_nom,
+.erreur_prenom,
+.erreur_tel,
+.erreur_mail_reg,
+.erreur_pass_reg{
+    color: red;
+    font-family: 'Poppins', sans-serif;
+    line-height: 10px;
+    display: none;
+}
+
+.erreur_nom.nom_erreur{
+    display: block;
+}
+
+.erreur_tel.tel_erreur{
+    display: block;
+}
+
+.erreur_pass.errone{
+    display: block;
+}
+
+.erreur_mail_reg.mail_erreur{
+    display: block;
+}
+
+.erreur_pass_reg.pass_erreur{
+    display: block;
+}
+
+.erreur_prenom.prenom_erreur{
+    display: block;
+}
+
+.erreur_pass.pass_log{
+    display: block;
+}
+
+.erreur_mail.mail_log{
+    display: block;
+}
+
+#bd{
+    visibility: hidden;
+}

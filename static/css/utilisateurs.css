@@ -1,0 +1,368 @@
+
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&display=swap');
+
+body{
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.container{
+    width: 80%;
+    margin:  0 auto;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.container-wrap{
+    padding: 20px 10px;
+}
+
+.border_vide{
+    height: 1px;
+    background-color: rgb(160, 158, 158);
+    width: 900px;
+    margin: auto;
+}
+
+.reservation-text{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+/*************page logo and text***********************/
+.logo-name{
+    width: 30%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    animation: scale .5s forwards;
+}
+
+.logo-name img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #000;
+}
+
+.logo-name .border{
+    width: 2px;
+    height: 30px;
+    background: #00a8fa;
+    margin-left: 0.3rem;
+    margin-top: 0.3rem;
+}
+
+.logo-name .site-nom{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 20px;
+    color: #000;
+    margin-left: 0.3rem;
+    margin-top: 0.6rem;
+}
+/******end logo***************/
+
+/*****************tips******************/
+.tips{
+    width: 29rem;
+    height: 4rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+    opacity: 0;
+    animation: fadeUp .5s forwards;
+    animation-delay: .3s;
+}
+
+.tips p{
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.5rem;
+}
+/************end tips*************/
+
+/************end logo and text**********************/
+
+/**************animation for logo and text****************/
+/**********animation for logo**********/
+@keyframes scale{
+    0%{
+      transform: scale(1.4);
+    }
+  
+    100%{
+      opacity: 1;
+      transform: scale(1);
+    }
+}
+/**********end animation for logo***********/
+
+/***********animation for the tips************/
+@keyframes fadeUp{
+    0%{
+      transform: translateY(5rem);
+    }
+  
+    100%{
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  /*******end animation for tips***************/
+/***********end animation*****************/
+
+/***********principal*************************/
+.principal{
+    margin: 0 auto;
+    margin-top: 1rem;
+    padding: 15px 35px;
+}
+.principal .commandes_cont{
+    margin: 0 auto;
+    margin-top: 1rem;
+    max-height: 50vh;
+    overflow-y: auto;
+    padding: 5px 15px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+
+/***********barre-test*************************/
+.principal .barre-test{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: unset;
+    border-bottom: 1.5px solid rgb(160, 158, 158);
+}
+
+.principal .barre-test a{
+    font-size: 25px;
+    margin-left: 1rem;
+    padding-left: 4px;
+    padding-top: 1.5px;
+    text-decoration: none;
+    color: #000;
+}
+
+
+
+.principal .barre-test a .refresh{
+    padding-top: 1px;
+    position: relative;
+    left: 0.2rem;
+    font-size: 27px;
+}
+
+.principal .barre-test a .search{
+    padding-top: 3px;
+}
+
+
+.principal .barre-test .barre-border{
+    width: 1.5px;
+    height: 30px;
+    margin-left: 0.8rem;
+    position: relative;
+    left: 0.3rem;
+    background: rgb(168, 168, 168);
+}
+
+
+/********end checkbox all******************************/
+
+/****************barre de recherch******************/
+
+.principal .barre-test .chercher{
+    width: 40%;
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-left: 8rem;
+    box-sizing: border-box;
+    text-align: center;
+    visibility: hidden;
+    background: transparent;
+}
+
+.principal .barre-test .chercher.active{
+    visibility: visible;
+    transition-delay: 0.2s;
+}
+
+.principal .barre-test .chercher input{
+    width: 250px;
+    height: 30px;
+    padding-left: 5px;
+    margin-left: 2rem;
+    font-size: 15px;
+    background: transparent;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    appearance: none;
+}
+
+.chercher button{
+    background: transparent;
+    text-align: center;
+    border: none;
+}
+
+.chercher button i{
+    font-size: 25px;
+    color: #01031e;
+    position: relative;
+    top: 0.3rem;
+}
+
+.principal .barre-test #close{
+    font-size: 25px;
+    color: #01031e;
+    margin-left: 1.7rem;
+    visibility: hidden;
+    background: transparent;
+}
+
+.principal .barre-test #close.active{
+    visibility: visible;
+    transition-delay: 0.2s;
+}
+
+.principal .barre-test .close{
+    margin-top: 0.25rem;
+    transform: rotate(45deg);
+}
+/***********end barre de recherch****************/
+
+/***********barre-test*************************/
+.principal .commandes_cont .list{
+    margin-top: 0.5rem;
+    padding:5px 10px;
+    
+}
+
+.list a{
+    margin-bottom: 0.2rem;
+    text-decoration: none;
+}
+
+.items{
+    display: grid;
+    grid-template-columns: 16rem 18rem 15rem;
+    padding: 7px 5px;
+    color: #000;
+    background: rgba(242,245,245,0.8);
+    border: 1px solid rgb(146, 145, 145);
+    border-radius: 2px;
+}
+
+.items:hover{
+    box-shadow: inset 0 1px 0 0 #dadce0, inset 0 -1px 0 0 #dadce0, inset 0 1px 0 0 rgba(60, 64, 67, .3),
+    0 1px 3px 1px rgba(60, 64, 67, .15);
+    z-index: 1;
+}
+
+.items .name{
+    padding: 3px 3px;
+}
+
+.items .profession, .personne-sexe{
+    margin-left: 1rem;
+    padding: 3px 10px;
+    border-left: 1px solid rgb(146, 145, 145) ;
+}
+
+.sexe{
+    font-size: 14px;
+    padding-top: 4px;
+}
+
+
+/***************in case if there is no records*************************/
+/*.container-vide{
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.container-vide .image{
+    margin: 0 auto;
+    width: 70%;
+    height: 80vh;
+    background-image: url(image/img10.png);
+    background-repeat: no-repeat;
+    background-size: 350px 350px;
+    background-position: center;
+    text-align: center;
+}
+
+.container-vide .image p{
+    margin: 0 auto;
+    margin-top: 26.5rem;
+    width: 35rem;
+    font-size: 14px;
+    line-height: 1.5rem;
+}
+
+.image p span{
+    font-size: 19px;
+    font-weight: 550;
+}*/
+.container-vide{
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.container-vide .image{
+    margin: 0 auto;
+    width: 70%;
+    height: 65vh;
+    background-image: url(image/img10.png);
+    background-repeat: no-repeat;
+    background-size: 350px 350px;
+    background-position: center;
+}
+
+/*.container-vide .article{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container-vide .article p{
+    margin: 0 auto;
+    width: 28rem;
+    font-size: 14px;
+    line-height: 1.5rem;
+}
+
+.article p span{
+    font-size: 19px;
+    font-weight: 550;
+}*/
+
+
+
+
+
